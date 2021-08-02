@@ -1,0 +1,292 @@
+@font-face {
+  font-family: dystopia-regular;
+  src: url(../Fonts/dystopia-regular-webfont.woff),
+  url(../Fonts/dystopia-regular-webfont.woff2),
+  url(../Fonts/Dystopia-Regular.ttf);
+}
+
+/* General Body Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'dystopia-regular', 'Bahnschrift', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #8a2222;
+  margin: 0px;
+  display: block;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background-image: url(../images/animal_farm.jpg);
+  background-size: contain, no-repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* Header styles */
+
+header {
+  background: #5d6e7c;
+  opacity: 0.75;
+  width: 100%;
+}
+
+header h1 {
+  opacity: 1;
+  color: white;
+  line-height: 1.5em;
+  text-align: center;
+  letter-spacing: 0.11em;
+  font-size: 350%;
+  text-shadow: 2px 2px 3px red;
+  margin-top: 0px;
+}
+
+/* main content styles grid layout styling*/
+
+.wrapper {
+  display: grid;
+}
+
+.label_number, .btn_book, .btn_clear, span {
+  letter-spacing: 0.05em;
+  font-size: 1.4em;
+}
+
+/* alert */
+
+.alert {
+  margin-top: 48px;
+  /* margin-bottom: */
+}
+
+/* number of quotation selection styling */
+
+label.label_number, select#quotationNumber {
+  margin-bottom: 15px;
+}
+
+select {
+  border: 1.5px solid black;
+  border-radius: 7%;
+  height: 1.4em;
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  align-self: center;
+  width: 50px;
+}
+
+/* type of quotation styling */
+
+.book_label {
+  letter-spacing: 0.1em;
+}
+
+/* printed quotes */
+
+#printedQuotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 24px;
+  letter-spacing: 0.04em;
+  font-size: 1.175em;
+}
+
+/* button */
+
+button {
+  height: 51px;
+}
+
+button.btn_clear {
+  margin-bottom: 48px;
+}
+
+button.btn_book {
+  margin-top: 24px;
+}
+
+/* sticky footer */
+
+#sticky {
+  min-height: calc(100vh - 80px);
+}
+
+/* footer styling */
+
+footer {
+  height: 80px;
+  background: rgba(14, 44, 92, 0.8);
+}
+
+footer span {
+  font-size: 0.8em;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* media queries */
+
+@media (min-width: 575.98px) { 
+
+  .quotation_selection {
+    display: flex;
+    align-items: center;
+  }
+
+  label.label_number, select#quotationNumber {
+    margin-bottom: 0px;
+  }
+
+  div.custom-radio, .quotationNumber {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  input.quotationNumber, label.quotationNumber {
+    margin-bottom: 0px;
+  }
+
+  label.quotationNumber {
+    margin-left: 0px;
+  }
+
+  footer span {
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 768px) {
+  #sticky {
+    display: grid;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(75px, auto) minmax(75px, auto) minmax(75px, auto) 1fr minmax(75px, auto);
+    grid-gap: 15px;
+  }
+
+  .alert {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  #quotationNumberGridItem {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #quotationSelectionGridItem {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+
+  #printedQuotes {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    margin-top: 0px;
+  }
+
+  button.btn_book {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    margin-top: 24px;
+  }
+
+  button.btn_clear {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+
+  footer {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 114.5px;
+    margin-bottom: -35px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(75px, auto) minmax(75px, auto) 1fr minmax(75px, auto);
+    grid-gap: 15px;
+  }
+
+  .alert {
+    max-height: 56px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin-top: 0px;
+  }
+  
+  #quotationNumberGridItem {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  #quotationSelectionGridItem {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #printedQuotes {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+
+  button.btn_book {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    margin-bottom: 0px;
+  }
+
+  button.btn_clear {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    margin-bottom: 0px;
+  }
+
+  footer {
+    margin-top: 0px;
+  }
+}
+
+
+
+
