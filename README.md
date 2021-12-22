@@ -1,4 +1,4 @@
-# Orwellian Quotation Generator
+# Orwellian Random Quotation Generator
 
 ## Introduction
 The fifth project of OpenClassroom's Front-End web developer path required me to program for a quotation generator which would generate 1 to 5 quotes from two different books.  I decided to choose two different George Orwell books to Quote.  Thus, the design was crafted with a Orwellian dystopic theme using html, bootstrap and CSS.  Additionally, the functionallity of the website was established using vanilla JavaScript.  This project served as a great way to learn JavaScript.
@@ -9,7 +9,7 @@ The fifth project of OpenClassroom's Front-End web developer path required me to
 - Bootstrap
 - Vanilla JavaScript
 
-### The online Orwellian Quotation Generator can be accessed by clicking the link below:
+### The online Orwellian Random Quotation Generator can be accessed by clicking the link below:
 https://mbdev95.github.io/OpenClassrooms-Project-5-Orwellian-Quotation-Generator/
 
 ## User Interface
